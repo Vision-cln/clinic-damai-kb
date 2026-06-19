@@ -44,3 +44,50 @@
 19/06/2026 11:07:21 - ? Deployed to GitHub successfully
 19/06/2026 11:07:21 - URL: https://vision-cln.github.io/clinic-penang-dashboard/
 19/06/2026 11:07:21 - Step 4: Uploading log file...
+19/06/2026 11:07:23 - ? Log file uploaded to GitHub
+19/06/2026 11:07:23 - === PROCESS COMPLETED SUCCESSFULLY ===
+19/06/2026 13:22:37 - === AUTO DASHBOARD GENERATION STARTED ===
+19/06/2026 13:22:37 - Timestamp: 19/06/2026 13:22:37
+19/06/2026 13:22:37 - Step 1: Generating last 7 days of dashboards...
+19/06/2026 13:22:37 - Regenerating last 7 days of dashboards...
+19/06/2026 13:22:37 - No patient activity records found for date: 13/06/2026
+19/06/2026 13:22:37 - Generated: dashboard_20260613.html
+19/06/2026 13:22:38 - Generated: dashboard_20260614.html
+19/06/2026 13:22:40 - Generated: dashboard_20260615.html
+19/06/2026 13:22:41 - Generated: dashboard_20260616.html
+19/06/2026 13:22:42 - Generated: dashboard_20260617.html
+19/06/2026 13:22:43 - Generated: dashboard_20260618.html
+19/06/2026 13:22:43 - No patient activity records found for date: 19/06/2026
+19/06/2026 13:22:43 - Generated: dashboard_20260619.html
+19/06/2026 13:22:43 - ? Regenerated 7 days of dashboards
+19/06/2026 13:22:43 - ? Dashboards generated successfully (includes yesterday for data updates)
+19/06/2026 13:22:43 - Step 1b: Regenerating main.html with date list...
+19/06/2026 13:22:43 - GenerateMainIndex: Searching for dashboard files 
+19/06/2026 13:22:43 - GenerateMainIndex: Found 8 files
+19/06/2026 13:22:43 - Generated main.html with 8 dates
+19/06/2026 13:22:43 - ? main.html regenerated with latest dates (DESCENDING order)
+19/06/2026 13:22:43 - Step 1c: Generating login page as index.html...
+19/06/2026 13:22:43 - Generated index.html (login page)
+19/06/2026 13:22:43 - ? Login page generated as index.html
+19/06/2026 13:22:43 - Step 1d: Exporting users to JSON...
+19/06/2026 13:22:43 - Exported 2 users to users.json
+19/06/2026 13:22:43 - Generated users.json
+19/06/2026 13:22:43 - ? users.json exported
+19/06/2026 13:22:43 - Step 2: Cleaning up old dashboard files...
+19/06/2026 13:22:43 - ? Cleaned up 0 old files
+19/06/2026 13:22:43 - Step 3: Deploying to Server...
+19/06/2026 13:22:43 - Found 10 files to upload
+19/06/2026 13:22:45 - Uploaded: dashboard_20260612.html
+19/06/2026 13:22:46 - Uploaded: dashboard_20260613.html
+19/06/2026 13:22:47 - Uploaded: dashboard_20260614.html
+19/06/2026 13:22:48 - Uploaded: dashboard_20260615.html
+19/06/2026 13:22:50 - Uploaded: dashboard_20260616.html
+19/06/2026 13:22:51 - Uploaded: dashboard_20260617.html
+19/06/2026 13:22:52 - Uploaded: dashboard_20260618.html
+19/06/2026 13:22:54 - Uploaded: dashboard_20260619.html
+19/06/2026 13:22:55 - Uploaded: index.html
+19/06/2026 13:22:56 - Uploaded: main.html
+19/06/2026 13:22:57 - Uploaded: users.json
+19/06/2026 13:22:57 - Upload complete: 11/11 files
+19/06/2026 13:22:57 - ? Deployed to Server successfully
+19/06/2026 13:22:57 - Step 4: Uploading log file...
