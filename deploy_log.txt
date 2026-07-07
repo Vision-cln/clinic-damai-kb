@@ -746,3 +746,130 @@
 03/07/2026 17:30:36 - Upload complete: 22/22 files
 03/07/2026 17:30:36 - ? Deployed to Server successfully
 03/07/2026 17:30:36 - Step 4: Uploading log file...
+03/07/2026 17:30:38 - ? Log file uploaded to Server
+03/07/2026 17:30:38 - === PROCESS COMPLETED SUCCESSFULLY ===
+06/07/2026 13:00:04 - === AUTO DASHBOARD GENERATION STARTED ===
+06/07/2026 13:00:04 - Timestamp: 06/07/2026 13:00:04
+06/07/2026 13:00:04 - Step 1: Generating last 7 days of dashboards...
+06/07/2026 13:00:04 - Regenerating last 7 days of dashboards...
+06/07/2026 13:00:06 - Generated: dashboard_20260630.html
+06/07/2026 13:00:08 - Generated: dashboard_20260701.html
+06/07/2026 13:00:10 - Generated: dashboard_20260702.html
+06/07/2026 13:00:11 - Generated: dashboard_20260703.html
+06/07/2026 13:00:11 - No patient activity records found for date: 04/07/2026
+06/07/2026 13:00:11 - Generated: dashboard_20260704.html
+06/07/2026 13:00:11 - Generated: dashboard_20260705.html
+06/07/2026 13:00:12 - Generated: dashboard_20260706.html
+06/07/2026 13:00:12 - ? Regenerated 7 days of dashboards
+06/07/2026 13:00:12 - ? Dashboards generated successfully (includes yesterday for data updates)
+06/07/2026 13:00:12 - Step 1b: Regenerating main.html with date list...
+06/07/2026 13:00:12 - GenerateMainIndex: Searching for dashboard files 
+06/07/2026 13:00:12 - GenerateMainIndex: Found 22 files
+06/07/2026 13:00:12 - Generated main.html with 22 dates
+06/07/2026 13:00:12 - ? main.html regenerated with latest dates (DESCENDING order)
+06/07/2026 13:00:12 - Step 1c: Generating login page as index.html...
+06/07/2026 13:00:12 - Generated index.html (login page)
+06/07/2026 13:00:12 - ? Login page generated as index.html
+06/07/2026 13:00:12 - Step 1d: Exporting users to JSON...
+06/07/2026 13:00:12 - Exported 2 users to users.json
+06/07/2026 13:00:12 - Generated users.json
+06/07/2026 13:00:12 - ? users.json exported
+06/07/2026 13:00:12 - Step 2: Cleaning up old dashboard files...
+06/07/2026 13:00:12 - ? Cleaned up 0 old files
+06/07/2026 13:00:12 - Step 3: Deploying to Server...
+06/07/2026 13:00:12 - Found 24 files to upload
+06/07/2026 13:00:42 - ERROR: OLE IDispatch exception code 0 from msxml3.dll: The download of the specified resource has failed.
+..
+06/07/2026 13:00:42 - === PROCESS FAILED ===
+06/07/2026 17:30:02 - === AUTO DASHBOARD GENERATION STARTED ===
+06/07/2026 17:30:02 - Timestamp: 06/07/2026 17:30:02
+06/07/2026 17:30:02 - Step 1: Generating last 7 days of dashboards...
+06/07/2026 17:30:02 - Regenerating last 7 days of dashboards...
+06/07/2026 17:30:03 - Generated: dashboard_20260630.html
+06/07/2026 17:30:04 - Generated: dashboard_20260701.html
+06/07/2026 17:30:05 - Generated: dashboard_20260702.html
+06/07/2026 17:30:06 - Generated: dashboard_20260703.html
+06/07/2026 17:30:06 - No patient activity records found for date: 04/07/2026
+06/07/2026 17:30:06 - Generated: dashboard_20260704.html
+06/07/2026 17:30:07 - Generated: dashboard_20260705.html
+06/07/2026 17:30:07 - Generated: dashboard_20260706.html
+06/07/2026 17:30:07 - ? Regenerated 7 days of dashboards
+06/07/2026 17:30:07 - ? Dashboards generated successfully (includes yesterday for data updates)
+06/07/2026 17:30:07 - Step 1b: Regenerating main.html with date list...
+06/07/2026 17:30:07 - GenerateMainIndex: Searching for dashboard files 
+06/07/2026 17:30:07 - GenerateMainIndex: Found 22 files
+06/07/2026 17:30:07 - Generated main.html with 22 dates
+06/07/2026 17:30:07 - ? main.html regenerated with latest dates (DESCENDING order)
+06/07/2026 17:30:08 - Step 1c: Generating login page as index.html...
+06/07/2026 17:30:08 - Generated index.html (login page)
+06/07/2026 17:30:08 - ? Login page generated as index.html
+06/07/2026 17:30:08 - Step 1d: Exporting users to JSON...
+06/07/2026 17:30:08 - Exported 2 users to users.json
+06/07/2026 17:30:08 - Generated users.json
+06/07/2026 17:30:08 - ? users.json exported
+06/07/2026 17:30:08 - Step 2: Cleaning up old dashboard files...
+06/07/2026 17:30:08 - ? Cleaned up 0 old files
+06/07/2026 17:30:08 - Step 3: Deploying to Server...
+06/07/2026 17:30:08 - Found 24 files to upload
+06/07/2026 17:30:39 - ERROR: OLE IDispatch exception code 0 from msxml3.dll: The download of the specified resource has failed.
+..
+06/07/2026 17:30:39 - === PROCESS FAILED ===
+07/07/2026 13:00:04 - === AUTO DASHBOARD GENERATION STARTED ===
+07/07/2026 13:00:04 - Timestamp: 07/07/2026 13:00:04
+07/07/2026 13:00:04 - Step 1: Generating last 7 days of dashboards...
+07/07/2026 13:00:04 - Regenerating last 7 days of dashboards...
+07/07/2026 13:00:05 - Generated: dashboard_20260701.html
+07/07/2026 13:00:07 - Generated: dashboard_20260702.html
+07/07/2026 13:00:07 - Generated: dashboard_20260703.html
+07/07/2026 13:00:08 - No patient activity records found for date: 04/07/2026
+07/07/2026 13:00:08 - Generated: dashboard_20260704.html
+07/07/2026 13:00:08 - Generated: dashboard_20260705.html
+07/07/2026 13:00:09 - Generated: dashboard_20260706.html
+07/07/2026 13:00:10 - Generated: dashboard_20260707.html
+07/07/2026 13:00:10 - ? Regenerated 7 days of dashboards
+07/07/2026 13:00:10 - ? Dashboards generated successfully (includes yesterday for data updates)
+07/07/2026 13:00:10 - Step 1b: Regenerating main.html with date list...
+07/07/2026 13:00:10 - GenerateMainIndex: Searching for dashboard files 
+07/07/2026 13:00:10 - GenerateMainIndex: Found 23 files
+07/07/2026 13:00:10 - Generated main.html with 23 dates
+07/07/2026 13:00:10 - ? main.html regenerated with latest dates (DESCENDING order)
+07/07/2026 13:00:10 - Step 1c: Generating login page as index.html...
+07/07/2026 13:00:10 - Generated index.html (login page)
+07/07/2026 13:00:10 - ? Login page generated as index.html
+07/07/2026 13:00:10 - Step 1d: Exporting users to JSON...
+07/07/2026 13:00:10 - Exported 2 users to users.json
+07/07/2026 13:00:10 - Generated users.json
+07/07/2026 13:00:10 - ? users.json exported
+07/07/2026 13:00:10 - Step 2: Cleaning up old dashboard files...
+07/07/2026 13:00:10 - ? Cleaned up 0 old files
+07/07/2026 13:00:10 - Step 3: Deploying to Server...
+07/07/2026 13:00:10 - Found 25 files to upload
+07/07/2026 13:00:12 - Uploaded: dashboard_20260612.html
+07/07/2026 13:00:13 - Uploaded: dashboard_20260613.html
+07/07/2026 13:00:14 - Uploaded: dashboard_20260614.html
+07/07/2026 13:00:16 - Uploaded: dashboard_20260615.html
+07/07/2026 13:00:17 - Uploaded: dashboard_20260616.html
+07/07/2026 13:00:19 - Uploaded: dashboard_20260617.html
+07/07/2026 13:00:20 - Uploaded: dashboard_20260618.html
+07/07/2026 13:00:21 - Uploaded: dashboard_20260619.html
+07/07/2026 13:00:22 - Uploaded: dashboard_20260623.html
+07/07/2026 13:00:24 - Uploaded: dashboard_20260624.html
+07/07/2026 13:00:25 - Uploaded: dashboard_20260625.html
+07/07/2026 13:00:27 - Uploaded: dashboard_20260626.html
+07/07/2026 13:00:28 - Uploaded: dashboard_20260627.html
+07/07/2026 13:00:30 - Uploaded: dashboard_20260628.html
+07/07/2026 13:00:31 - Uploaded: dashboard_20260629.html
+07/07/2026 13:00:33 - Uploaded: dashboard_20260630.html
+07/07/2026 13:00:35 - Uploaded: dashboard_20260701.html
+07/07/2026 13:00:36 - Uploaded: dashboard_20260702.html
+07/07/2026 13:00:37 - Uploaded: dashboard_20260703.html
+07/07/2026 13:00:39 - Uploaded: dashboard_20260704.html
+07/07/2026 13:00:40 - Uploaded: dashboard_20260705.html
+07/07/2026 13:00:41 - Uploaded: dashboard_20260706.html
+07/07/2026 13:00:42 - Uploaded: dashboard_20260707.html
+07/07/2026 13:00:43 - Uploaded: index.html
+07/07/2026 13:00:44 - Uploaded: main.html
+07/07/2026 13:00:46 - Uploaded: users.json
+07/07/2026 13:00:46 - Upload complete: 26/26 files
+07/07/2026 13:00:46 - ? Deployed to Server successfully
+07/07/2026 13:00:46 - Step 4: Uploading log file...
