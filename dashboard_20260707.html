@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Clinic Dashboard</title>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<style>
+* { box-sizing: border-box; }
+body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
+.header { background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%); color: white; padding: 0; text-align: center; }
+.header-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background: rgba(0,0,0,0.1); font-size: 13px; }
+.back-link { color: rgba(255,255,255,0.9); text-decoration: none; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.3); border-radius: 4px; transition: all 0.2s; }
+.back-link:hover { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.5); }
+.gen-info { color: rgba(255,255,255,0.8); font-size: 12px; }
+.header h1 { margin: 20px 0 5px 0; font-size: 28px; font-weight: 600; }
+.date-display { font-size: 18px; margin: 5px 0 20px 0; opacity: 0.9; font-weight: 300; }
+.content { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 30px; }
+.stat-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center; border: 1px solid #e9ecef; transition: transform 0.2s, box-shadow 0.2s; }
+.stat-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+.stat-value { font-size: 38px; font-weight: 700; color: #2196F3; margin-bottom: 8px; }
+.stat-label { color: #6c757d; font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+.data-table { width: 100%; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid #e9ecef; }
+.data-table th { background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%); color: white; padding: 14px 16px; text-align: left; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+.data-table td { padding: 14px 16px; border-bottom: 1px solid #e9ecef; font-size: 14px; }
+.data-table tr:hover { background: #f8f9fa; }
+.data-table tr:last-child td { border-bottom: none; }
+.footer { background: #fff; color: #6c757d; text-align: center; padding: 20px; margin-top: 40px; border-top: 1px solid #e9ecef; font-size: 13px; }
+.footer a { color: #2196F3; text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+@media (max-width: 768px) { .header-top { flex-direction: column; gap: 10px; } .stats-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<script>
+var _a=sessionStorage.getItem('auth');if(_a==null||_a==''){window.location.href='index.html';}
+</script>
+<div class='header'>
+  <div class='header-top'>
+    <a href='main.html' class='back-link'>&lt; Back to Main</a>
+    <span class='gen-info'>         Last Generated: 07/07/2026 13:00:09</span>
+    <span style='margin-left:auto;font-size:13px'>User: <span id='user-display'></span></span>
+  </div>
+  <h1>Clinic Dashboard</h1>
+  <div class='date-display'>07/07/2026</div>
+</div>
+<script>document.getElementById('user-display').textContent=sessionStorage.getItem('username')||'Unknown';</script>
+<div class='content'>
+<div class='stats-grid'>
+  <div class='stat-card'>
+    <div class='stat-value'>4585</div>
+    <div class='stat-label'>Total Patients</div>
+  </div>
+  <div class='stat-card'>
+    <div class='stat-value'>9</div>
+    <div class='stat-label'>Today's Patients</div>
+  </div>
+  <div class='stat-card'>
+    <div class='stat-value'>9</div>
+    <div class='stat-label'>Consulted</div>
+  </div>
+  <div class='stat-card'>
+    <div class='stat-value'>RM 1158</div>
+    <div class='stat-label'>Today's Revenue</div>
+  </div>
+</div>
+<h3>Patient Activity</h3>
+<table class='data-table'>
+<tr><th>Patient</th><th>IC</th><th>Registration</th><th>Consultation</th><th>Diagnosis</th><th>Medicine</th><th>Amount</th></tr>
+<tr>
+<td>MUHAMMAD ADEEB NAUFAL B MUHAMMAD DANIAL </td>
+<td>181219110171</td>
+<td>07/07/2026</td>
+<td>07/07/2026 09:56</td>
+<td>FEVER X 3/7 MORE AT NIGHT + COUGH NO RN ORAL ITNAKE GOOD    ; HR 98 SPO2 98 T 36 THROAT MILD INJ TONSILS NAD LUNGS CLER E ; EA                                                          </td>
+<td>CEPHALEXIN, PCM       , TCA       , WINDECO   </td>
+<td>RM 57</td>
+</tr>
+<tr>
+<td>MUHAMMAD DANIAL BIN SAMSUDDIN           </td>
+<td>920701075673</td>
+<td>07/07/2026</td>
+<td>07/07/2026 09:57</td>
+<td>DIARREHA 3 EPS YEST, VOMITTING 3 EPS. TODAY DIARRHEA VOMTTIN; 1 EP. YEST TAKEN PASAR MALAM FOOD BP 136/87 HR 115 SPO2 99  ; T 36 TONGUE COATED PA SNT                                   </td>
+<td>IMODI     , MMT       , MOTIL     , TCA       </td>
+<td>RM 49</td>
+</tr>
+<tr>
+<td>SITI NORBAYA BINTI KAMARUDIN            </td>
+<td>920715115138</td>
+<td>07/07/2026</td>
+<td>07/07/2026 09:57</td>
+<td>HEADACHE- TAKEN PIRITON LAST NIGHT FOR AR BP 138/84 HR 78   ; SPO2 99 T 36 INTRAORAL NAD                                  </td>
+<td>AERIUS G  , MAXIGESIC , TCA       </td>
+<td>RM 43</td>
+</tr>
+<tr>
+<td>KHO SOO LING                            </td>
+<td>910806075662</td>
+<td>07/07/2026</td>
+<td>07/07/2026 10:19</td>
+<td> - </td>
+<td>BT KT2    </td>
+<td>RM 150</td>
+</tr>
+<tr>
+<td>MOHAMAD ASROL ISHAK BIN MAD ISA         </td>
+<td>900505085235</td>
+<td>07/07/2026</td>
+<td>07/07/2026 10:23</td>
+<td>SORE THROAT + FEVRISH MILD RN DIARRHEA 1 EP BP 129/80 HR 78 ; SPO2 99 T 36 THROAT INJ TONSILS NAD LUNGS CLEAR EA PA SNT   </td>
+<td>ALLERPID  , BUSCO     , IMODI     , PCM 650   , TCA2      , TRAZESIL  </td>
+<td>RM 113</td>
+</tr>
+<tr>
+<td>SITI NUR SYUHAIBAH BINTI MOHD SAMSUDIN  </td>
+<td>940427095046</td>
+<td>07/07/2026</td>
+<td>07/07/2026 10:55</td>
+<td>DIARREHA >20EPS NO VOMITTING COLICKY ABD PAIN TAKEN OUTSIDE ; FOOD YEST BP 126/72 HR 102 SPO2 99 T 36 HYDRATION FAIR PA SN; T                                                           </td>
+<td>BUSCO     , IMODI     , MMT       , TCA       </td>
+<td>RM 50</td>
+</tr>
+<tr>
+<td>NURUL AMIRAH SYAHIDAH BINTI BAKAR       </td>
+<td>960603026268</td>
+<td>07/07/2026</td>
+<td>07/07/2026 12:28</td>
+<td>MISSED INJ 1 WEEK- TODAY WEIGHT 92<< 93.6 TOTAL LOSS 5KG    ; NO SE PREV DOSE. MEAL 1X/DAY                                </td>
+<td>MOUNJARO10, TCA2      , WINDECO   </td>
+<td>RM 500</td>
+</tr>
+<tr>
+<td>HASIAH BINTI ABDUL HALIF                </td>
+<td>390417085430</td>
+<td>07/07/2026</td>
+<td>07/07/2026 12:39</td>
+<td>RIGHT FOOT ICHINESS AND REDNESS ?UNSURE CAUSE BP 132/54 HR 6; 4 SPO2 99 T 36 RIGHT FOOT DRY ERTHEMATOUS OVER DORSUM       ; ROM FULL MIN SWELLING KIV FOR ORAL ABX IF NOT RESOVLE       </td>
+<td>AMLO5     , CLOBI OINT, LEVO      , MUPIROCIN , TCA       </td>
+<td>RM 63</td>
+</tr>
+<tr>
+<td>AZAIZUDDIN BIN EMBONG                   </td>
+<td>790326115449</td>
+<td>07/07/2026</td>
+<td>07/07/2026 12:45</td>
+<td>FEVER X 2/7 MIN CIUGH RN HEADACHE NO GI LOSSES SICK CONTACT ; W CHILD BP 136/60 HR 128 SPO2 99 T 37.4 TAKEN PANADOL       ; THROAT INJ TONSILS NAD LUNGS CLEAR EA                       </td>
+<td>ALLERPID  , CELE400   , PCM 650   , TCA2      , WINDECO   </td>
+<td>RM 133</td>
+</tr>
+</table>
+</div>
+<div class='footer'>
+  <p>  | <a href='main.html'>Back to Main Dashboard</a> | <a href='index.html' onclick='sessionStorage.removeItem("auth")'>Logout</a></p>
+</div>
+</body>
+</html>
