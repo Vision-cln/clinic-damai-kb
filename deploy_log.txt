@@ -63,3 +63,56 @@
 14/07/2026 13:00:37 - Upload complete: 18/18 files
 14/07/2026 13:00:37 - ? Deployed to Server successfully
 14/07/2026 13:00:37 - Step 4: Uploading log file...
+14/07/2026 13:00:38 - ? Log file uploaded to Server
+14/07/2026 13:00:38 - === PROCESS COMPLETED SUCCESSFULLY ===
+14/07/2026 17:30:15 - === AUTO DASHBOARD GENERATION STARTED ===
+14/07/2026 17:30:15 - Timestamp: 14/07/2026 17:30:15
+14/07/2026 17:30:15 - Step 1: Generating last 7 days of dashboards...
+14/07/2026 17:30:15 - Regenerating last 7 days of dashboards...
+14/07/2026 17:30:17 - Generated: dashboard_20260708.html
+14/07/2026 17:30:19 - Generated: dashboard_20260709.html
+14/07/2026 17:30:21 - Generated: dashboard_20260710.html
+14/07/2026 17:30:21 - No patient activity records found for date: 11/07/2026
+14/07/2026 17:30:21 - Generated: dashboard_20260711.html
+14/07/2026 17:30:22 - Generated: dashboard_20260712.html
+14/07/2026 17:30:23 - Generated: dashboard_20260713.html
+14/07/2026 17:30:24 - Generated: dashboard_20260714.html
+14/07/2026 17:30:24 - ? Regenerated 7 days of dashboards
+14/07/2026 17:30:24 - ? Dashboards generated successfully (includes yesterday for data updates)
+14/07/2026 17:30:24 - Step 1b: Regenerating main.html with date list...
+14/07/2026 17:30:24 - GenerateMainIndex: Searching for dashboard files 
+14/07/2026 17:30:24 - GenerateMainIndex: Found 15 files
+14/07/2026 17:30:24 - Generated main.html with 15 dates
+14/07/2026 17:30:24 - ? main.html regenerated with latest dates (DESCENDING order)
+14/07/2026 17:30:24 - Step 1c: Generating login page as index.html...
+14/07/2026 17:30:24 - Generated index.html (login page)
+14/07/2026 17:30:24 - ? Login page generated as index.html
+14/07/2026 17:30:24 - Step 1d: Exporting users to JSON...
+14/07/2026 17:30:24 - Exported 2 users to users.json
+14/07/2026 17:30:24 - Generated users.json
+14/07/2026 17:30:24 - ? users.json exported
+14/07/2026 17:30:24 - Step 2: Cleaning up old dashboard files...
+14/07/2026 17:30:24 - ? Cleaned up 0 old files
+14/07/2026 17:30:24 - Step 3: Deploying to Server...
+14/07/2026 17:30:24 - Found 17 files to upload
+14/07/2026 17:30:26 - Uploaded: dashboard_20260630.html
+14/07/2026 17:30:27 - Uploaded: dashboard_20260701.html
+14/07/2026 17:30:29 - Uploaded: dashboard_20260702.html
+14/07/2026 17:30:30 - Uploaded: dashboard_20260703.html
+14/07/2026 17:30:31 - Uploaded: dashboard_20260704.html
+14/07/2026 17:30:32 - Uploaded: dashboard_20260705.html
+14/07/2026 17:30:33 - Uploaded: dashboard_20260706.html
+14/07/2026 17:30:35 - Uploaded: dashboard_20260707.html
+14/07/2026 17:30:37 - Uploaded: dashboard_20260708.html
+14/07/2026 17:30:38 - Uploaded: dashboard_20260709.html
+14/07/2026 17:30:40 - Uploaded: dashboard_20260710.html
+14/07/2026 17:30:41 - Uploaded: dashboard_20260711.html
+14/07/2026 17:30:42 - Uploaded: dashboard_20260712.html
+14/07/2026 17:30:44 - Uploaded: dashboard_20260713.html
+14/07/2026 17:30:45 - Uploaded: dashboard_20260714.html
+14/07/2026 17:30:46 - Uploaded: index.html
+14/07/2026 17:30:48 - Uploaded: main.html
+14/07/2026 17:30:49 - Uploaded: users.json
+14/07/2026 17:30:49 - Upload complete: 18/18 files
+14/07/2026 17:30:49 - ? Deployed to Server successfully
+14/07/2026 17:30:49 - Step 4: Uploading log file...
