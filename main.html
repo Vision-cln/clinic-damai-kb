@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Clinic Management Dashboard</title>
+<title>Poliklinik Damai Bertam - Management Dashboard</title>
 <meta charset='UTF-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <style>
@@ -17,6 +17,12 @@ body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f
 .stat-value.blue { color: #2196F3; }
 .stat-detail { font-size: 12px; color: #666; }
 .activity-detail { font-size: 13px; color: #666; line-height: 1.6; }
+.revenue-card { padding:16px 20px; }
+.revenue-card h3 { margin:0 0 6px 0; font-size:16px; font-weight:600; }
+.revenue-breakdown { margin-top:0; padding-top:6px; border-top:1px solid #e9ecef; text-align:left; width:100%; }
+.revenue-row { display:flex; justify-content:space-between; align-items:center; width:100%; margin:4px 0; }
+.revenue-name { font-weight:600; color:#555; }
+.revenue-amount { font-weight:bold; color:#2196F3; }
 .date-section { background: white; margin: 0 20px 20px 20px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
 .date-section h2 { margin: 0 0 15px 0; color: #2196F3; font-size: 18px; }
 .date-buttons { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -31,7 +37,7 @@ var _a=sessionStorage.getItem('auth');if(_a==null||_a==''){window.location.href=
 <div class='header'>
   <div style='display:flex;justify-content:space-between;align-items:center;padding:20px 30px'>
     <div>
-      <h1 style='margin:0;font-size:28px'>Clinic Management Dashboard</h1>
+      <h1 style='margin:0;font-size:28px'>Poliklinik Damai Bertam - Clinic Management Dashboard</h1>
       <div class='quick-access'>Quick Access:</div>
     </div>
     <div style='text-align:right'>
@@ -45,7 +51,7 @@ var _a=sessionStorage.getItem('auth');if(_a==null||_a==''){window.location.href=
   <div class='stats-row'>
     <div class='stat-card'>
       <h3>Total Patients</h3>
-      <div class='stat-value blue'>4592</div>
+      <div class='stat-value blue'>4599</div>
       <div class='stat-detail'>New Patient Today: 3</div>
     </div>
     <div class='stat-card'>
@@ -55,15 +61,15 @@ var _a=sessionStorage.getItem('auth');if(_a==null||_a==''){window.location.href=
     </div>
     <div class='stat-card'>
       <h3>Revenue</h3>
-      <div class='stat-value blue'>RM 630</div>
-      <div class='stat-detail'>Today: RM 630</div>
+      <div class='stat-value blue'>RM 850</div>
+      <div class='stat-detail'>Today: RM 850</div>
     </div>
     <div class='stat-card'>
       <h3>Today's Activity</h3>
       <div class='activity-detail'>
-        Total Registered: 13<br>
-        Pending: 2<br>
-        Last Update: 10/07/2026 17:30:07
+        Total Registered: 10<br>
+        Pending: 0<br>
+        Last Update: 14/07/2026 13:00:10
       </div>
     </div>
   </div>
@@ -71,6 +77,10 @@ var _a=sessionStorage.getItem('auth');if(_a==null||_a==''){window.location.href=
 <div class='date-section'>
   <h2>Select Date to View Detailed Dashboard</h2>
   <div class='date-buttons'>
+    <a href='dashboard_20260714.html' class='date-button'>14/07/2026</a>
+    <a href='dashboard_20260713.html' class='date-button'>13/07/2026</a>
+    <a href='dashboard_20260712.html' class='date-button'>12/07/2026</a>
+    <a href='dashboard_20260711.html' class='date-button'>11/07/2026</a>
     <a href='dashboard_20260710.html' class='date-button'>10/07/2026</a>
     <a href='dashboard_20260709.html' class='date-button'>09/07/2026</a>
     <a href='dashboard_20260708.html' class='date-button'>08/07/2026</a>
@@ -81,22 +91,6 @@ var _a=sessionStorage.getItem('auth');if(_a==null||_a==''){window.location.href=
     <a href='dashboard_20260703.html' class='date-button'>03/07/2026</a>
     <a href='dashboard_20260702.html' class='date-button'>02/07/2026</a>
     <a href='dashboard_20260701.html' class='date-button'>01/07/2026</a>
-    <a href='dashboard_20260630.html' class='date-button'>30/06/2026</a>
-    <a href='dashboard_20260629.html' class='date-button'>29/06/2026</a>
-    <a href='dashboard_20260628.html' class='date-button'>28/06/2026</a>
-    <a href='dashboard_20260627.html' class='date-button'>27/06/2026</a>
-    <a href='dashboard_20260626.html' class='date-button'>26/06/2026</a>
-    <a href='dashboard_20260625.html' class='date-button'>25/06/2026</a>
-    <a href='dashboard_20260624.html' class='date-button'>24/06/2026</a>
-    <a href='dashboard_20260623.html' class='date-button'>23/06/2026</a>
-    <a href='dashboard_20260619.html' class='date-button'>19/06/2026</a>
-    <a href='dashboard_20260618.html' class='date-button'>18/06/2026</a>
-    <a href='dashboard_20260617.html' class='date-button'>17/06/2026</a>
-    <a href='dashboard_20260616.html' class='date-button'>16/06/2026</a>
-    <a href='dashboard_20260615.html' class='date-button'>15/06/2026</a>
-    <a href='dashboard_20260614.html' class='date-button'>14/06/2026</a>
-    <a href='dashboard_20260613.html' class='date-button'>13/06/2026</a>
-    <a href='dashboard_20260612.html' class='date-button'>12/06/2026</a>
   </div>
 </div>
 <div style='text-align:center;padding:20px;background:#f5f5f5;border-top:1px solid #ddd'>
