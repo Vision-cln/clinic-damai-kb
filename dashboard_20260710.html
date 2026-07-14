@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Clinic Dashboard</title>
+<title>Poliklinik Damai Bertam - Clinic Dashboard</title>
 <meta charset='UTF-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <style>
@@ -20,6 +20,12 @@ body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; backgr
 .stat-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
 .stat-value { font-size: 38px; font-weight: 700; color: #2196F3; margin-bottom: 8px; }
 .stat-label { color: #6c757d; font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+.revenue-card { padding:16px 20px; }
+.revenue-card h3 { margin:0 0 6px 0; font-size:16px; font-weight:600; }
+.revenue-breakdown { margin-top:0; padding-top:6px; border-top:1px solid #e9ecef; text-align:left; width:100%; }
+.revenue-row { display:flex; justify-content:space-between; align-items:center; width:100%; margin:4px 0; }
+.revenue-name { font-weight:600; color:#555; }
+.revenue-amount { font-weight:bold; color:#2196F3; }
 .data-table { width: 100%; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid #e9ecef; }
 .data-table th { background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%); color: white; padding: 14px 16px; text-align: left; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
 .data-table td { padding: 14px 16px; border-bottom: 1px solid #e9ecef; font-size: 14px; }
@@ -38,124 +44,163 @@ var _a=sessionStorage.getItem('auth');if(_a==null||_a==''){window.location.href=
 <div class='header'>
   <div class='header-top'>
     <a href='main.html' class='back-link'>&lt; Back to Main</a>
-    <span class='gen-info'>         Last Generated: 10/07/2026 17:30:06</span>
+    <span class='gen-info'>         Last Generated: 14/07/2026 13:00:06</span>
     <span style='margin-left:auto;font-size:13px'>User: <span id='user-display'></span></span>
   </div>
-  <h1>Clinic Dashboard</h1>
+  <h1>Poliklinik Damai Bertam - Clinic Dashboard</h1>
   <div class='date-display'>10/07/2026</div>
 </div>
 <script>document.getElementById('user-display').textContent=sessionStorage.getItem('username')||'Unknown';</script>
 <div class='content'>
 <div class='stats-grid'>
   <div class='stat-card'>
-    <div class='stat-value'>4592</div>
+    <div class='stat-value'>4599</div>
     <div class='stat-label'>Total Patients</div>
   </div>
   <div class='stat-card'>
-    <div class='stat-value'>13</div>
-    <div class='stat-label'>Today's Patients</div>
-  </div>
-  <div class='stat-card'>
-    <div class='stat-value'>10</div>
+    <div class='stat-value'>12</div>
     <div class='stat-label'>Consulted</div>
   </div>
   <div class='stat-card'>
-    <div class='stat-value'>RM 630</div>
+    <div class='stat-value'>RM 750</div>
     <div class='stat-label'>Today's Revenue</div>
+  </div>
+  <div class='stat-card revenue-card'>
+    <h3>Revenue Breakdown</h3>
+    <div class='revenue-breakdown'>
+      <div class='revenue-row'>
+        <span class='revenue-name'>Cash</span>
+        <span class='revenue-amount'>RM 195</span>
+      </div>
+      <div class='revenue-row'>
+        <span class='revenue-name'>Panel</span>
+        <span class='revenue-amount'>RM 555</span>
+      </div>
+    </div>
   </div>
 </div>
 <h3>Patient Activity</h3>
 <table class='data-table'>
-<tr><th>Patient</th><th>IC</th><th>Registration</th><th>Consultation</th><th>Diagnosis</th><th>Medicine</th><th>Amount</th></tr>
+<tr><th>Patient</th><th>IC</th><th>Age</th><th>Consultation</th><th>Diagnosis</th><th>Medicine</th><th>Amount</th><th>Panel</th></tr>
 <tr>
 <td>MUHAMMAD SAFWAN BIN ZULKEFLI            </td>
 <td>900405075769</td>
-<td>10/07/2026</td>
+<td>36</td>
 <td>10/07/2026 09:17</td>
 <td> - </td>
-<td>AERIUS G  , FLU       , TCA2      , TRAZESIL  , WINDECO   </td>
+<td>AERIUS G (10), FLU (10), TCA2 (1), TRAZESIL (12), WINDECO (1)</td>
 <td>RM 76</td>
+<td>AIA  </td>
 </tr>
 <tr>
 <td>MUHAMAD FAZLEY BIN MUHAMAD ZAINUN       </td>
 <td>870321355355</td>
-<td>10/07/2026</td>
+<td>39</td>
 <td>10/07/2026 09:22</td>
 <td>LEFT SHOULDER PAIN X 3/7 CARRIES HEAVY OBJECT BP 164/102>>  ; 154/101 PS 3 HR 78 SPO2 99 T 36 FOR SMBP KIV FOR ANTIHPT    ; LEFT SHOULDER NO OBV SWELLING ROM PASSIVE FULL NEURO        ; INTACT                                                      </td>
-<td>CELE400   , LOCOA     , TCA2      </td>
+<td>CELE400 (10), LOCOA (1), TCA2 (1)</td>
 <td>RM 105</td>
+<td>MCARE</td>
 </tr>
 <tr>
 <td>AZAIZUDDIN BIN EMBONG                   </td>
 <td>790326115449</td>
-<td>10/07/2026</td>
+<td>47</td>
 <td>10/07/2026 11:02</td>
 <td>STILL HAVING FEVER - STILL TAKEN PCM RESOLVING RN AND COUGH ; BP 136/81 HR 78 SPO2 99 T 36 THROAT IN JTONSILS NAD         ; LUNGS CLEAR EA                                              </td>
-<td>AERIUS G  , TCA2      , WINDECO   , ZITHROLIDE</td>
+<td>AERIUS G (10), TCA2 (1), WINDECO (1), ZITHROLIDE (3)</td>
 <td>RM 84</td>
+<td>AIA  </td>
 </tr>
 <tr>
 <td>ZAINAB BINTI HASHIM                     </td>
 <td>610307025068</td>
-<td>10/07/2026</td>
+<td>65</td>
 <td>10/07/2026 11:15</td>
 <td> - </td>
-<td>CLOBI OINT, ROSUVAS 20</td>
+<td>CLOBI OINT (1), ROSUVAS 20 (30)</td>
 <td>RM 70</td>
+<td>CASH</td>
 </tr>
 <tr>
 <td>MUHAMMAD UWAIS BIN HUDZAIFAH            </td>
 <td>220518070535</td>
-<td>10/07/2026</td>
+<td>4</td>
 <td>10/07/2026 12:01</td>
 <td>FEVER SINCE LAST NIGHT MIN CIUGH AND RN NO GI LOSSES        ; ORAL INTAKE GOOD ACTIVE T 36 INTRAORAL AND LUNGS CLEAR EA   </td>
-<td>AERIUS    , PCM       , TCA2      , WINDECO   </td>
+<td>AERIUS (1), PCM (1), TCA2 (1), WINDECO (1)</td>
 <td>RM 86</td>
+<td>AIA  </td>
 </tr>
 <tr>
 <td>NUR FARISHA AQILA BT MOHAMAD SHEQALAZROY</td>
 <td>170218070290</td>
-<td>10/07/2026</td>
+<td>9</td>
 <td>10/07/2026 15:01</td>
 <td>FALL YESTERDAYA 5PM FROM SEESAW FELL OVER RIGHT SIDE SUS    ; TRAINED RIGHT SCALP SWELLING, PAIN OVER MOUTH NO VOMTTING   ; POST TRAUMA, NO FITTING EP NO ABN BEHAVIOUR BL PUPILS EQ    ; REACTIVE RIGHT SCALP SWELLING 3X3CM NO BRUISE NO RACOON     ; EYE INTRAORAL RIGHT LOWER LIP HEMATOMA 1X1CM TO OBS 24H     </td>
-<td>MUCO2     , NUROFEN   , ORAL      , TCA2      , VIT C KIDS</td>
+<td>MUCO2 (10), NUROFEN (1), ORAL (1), TCA2 (1), VIT C KIDS (1)</td>
 <td>RM 0</td>
+<td>CASH</td>
 </tr>
 <tr>
 <td>NUR ARIANI BINTI JAAFAR                 </td>
 <td>860214265582</td>
-<td>10/07/2026</td>
+<td>40</td>
 <td>10/07/2026 15:01</td>
 <td> - </td>
-<td>TCA2      </td>
+<td>TCA2 (2.4)</td>
 <td>RM 84</td>
+<td>AIA  </td>
 </tr>
 <tr>
 <td>MAZAYA BINTI MARZUKI                    </td>
 <td>090103070012</td>
-<td>10/07/2026</td>
+<td>17</td>
 <td>10/07/2026 15:19</td>
 <td>FEVERISH RN AND COUGH NO GI LSOSES NO SICK CONTACT ORAL     ; INTAKE GOOD BP 113/66 HR 105 SPO2 99 T 36 INTRAORAL NAD L   ; LUNGS CLEAR EA                                              </td>
-<td>AERIUS G  , PCM 650   , TCA       , WINDECO   </td>
+<td>AERIUS G (10), PCM 650 (10), TCA (1), WINDECO (1)</td>
 <td>RM 60</td>
+<td>CASH</td>
 </tr>
 <tr>
 <td>NUR BATRISYIA BINTI MOHD IZHAR          </td>
 <td>030724070504</td>
-<td>10/07/2026</td>
+<td>23</td>
 <td>10/07/2026 15:28</td>
 <td> - </td>
-<td>ITYPHIM   </td>
+<td>ITYPHIM (1)</td>
 <td>RM 65</td>
+<td>CASH</td>
 </tr>
 <tr>
 <td>WAN NUR AINA NABIELA BINTI MOHAMAD AZAM </td>
 <td>001228101380</td>
-<td>10/07/2026</td>
+<td>26</td>
 <td>10/07/2026 17:22</td>
-<td> - </td>
-<td>AERIUS G  , AIRTAL    , DERMORUB  , PCM65     , REFER     , TCA2      , WINDECO   </td>
+<td>BP 142/73 HR 78 SPO2 99                                     </td>
+<td>AERIUS G (10), AIRTAL (10), DERMORUB (1), PCM65 (20), REFER (1), TCA2 (1), WINDECO (1)</td>
 <td>RM 0</td>
+<td>CASH</td>
+</tr>
+<tr>
+<td>WAN NUR AINA ALYEANA BINTI MOHD AZAM    </td>
+<td>031111101632</td>
+<td>23</td>
+<td>10/07/2026 17:30</td>
+<td>LOWER BACK PAIN X 3/7- WORKING LONG STANDING, PACKING GOODS ; BACK NAD NEURO INTACT C/O CHRONIC LEFT KNEE PAIN POST       ; TRAUMA DURING MARTIAL ARTS CLAS. OE LEFT KNEE NO OBV SWELLIN; G LEFT KNEE JT TENDERNESS SPECIAL TEST NEGATIVE             ; CLERK FOR AINA NABIELA                                      </td>
+<td>TCA2 (3.4)</td>
+<td>RM 120</td>
+<td>PMCAR</td>
+</tr>
+<tr>
+<td>NURULAEZZAH BINTI MOHD SALLEH           </td>
+<td>800911075288</td>
+<td>46</td>
+<td>10/07/2026 17:52</td>
+<td>RV BT ALL NORMAL EXP HB 8.3- IRON 2.9 HAD LIST OF IRON SUPPL; ENT W SE SUGGEST TO TAKE IN DIETARY PLT 540 CA125 70        ; POSTMENSES (D8) IF TOO ANXIOUS TO REPEAT CA125 NEXT WEEK    </td>
+<td> - </td>
+<td>RM 0</td>
+<td>CASH</td>
 </tr>
 </table>
 </div>
