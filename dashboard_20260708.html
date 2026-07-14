@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Clinic Dashboard</title>
+<title>Poliklinik Damai Bertam - Clinic Dashboard</title>
 <meta charset='UTF-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <style>
@@ -20,6 +20,12 @@ body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; backgr
 .stat-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
 .stat-value { font-size: 38px; font-weight: 700; color: #2196F3; margin-bottom: 8px; }
 .stat-label { color: #6c757d; font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+.revenue-card { padding:16px 20px; }
+.revenue-card h3 { margin:0 0 6px 0; font-size:16px; font-weight:600; }
+.revenue-breakdown { margin-top:0; padding-top:6px; border-top:1px solid #e9ecef; text-align:left; width:100%; }
+.revenue-row { display:flex; justify-content:space-between; align-items:center; width:100%; margin:4px 0; }
+.revenue-name { font-weight:600; color:#555; }
+.revenue-amount { font-weight:bold; color:#2196F3; }
 .data-table { width: 100%; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid #e9ecef; }
 .data-table th { background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%); color: white; padding: 14px 16px; text-align: left; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
 .data-table td { padding: 14px 16px; border-bottom: 1px solid #e9ecef; font-size: 14px; }
@@ -38,22 +44,18 @@ var _a=sessionStorage.getItem('auth');if(_a==null||_a==''){window.location.href=
 <div class='header'>
   <div class='header-top'>
     <a href='main.html' class='back-link'>&lt; Back to Main</a>
-    <span class='gen-info'>         Last Generated: 10/07/2026 17:30:05</span>
+    <span class='gen-info'>         Last Generated: 14/07/2026 13:00:03</span>
     <span style='margin-left:auto;font-size:13px'>User: <span id='user-display'></span></span>
   </div>
-  <h1>Clinic Dashboard</h1>
+  <h1>Poliklinik Damai Bertam - Clinic Dashboard</h1>
   <div class='date-display'>08/07/2026</div>
 </div>
 <script>document.getElementById('user-display').textContent=sessionStorage.getItem('username')||'Unknown';</script>
 <div class='content'>
 <div class='stats-grid'>
   <div class='stat-card'>
-    <div class='stat-value'>4592</div>
+    <div class='stat-value'>4599</div>
     <div class='stat-label'>Total Patients</div>
-  </div>
-  <div class='stat-card'>
-    <div class='stat-value'>0</div>
-    <div class='stat-label'>Today's Patients</div>
   </div>
   <div class='stat-card'>
     <div class='stat-value'>10</div>
@@ -63,99 +65,122 @@ var _a=sessionStorage.getItem('auth');if(_a==null||_a==''){window.location.href=
     <div class='stat-value'>RM 902</div>
     <div class='stat-label'>Today's Revenue</div>
   </div>
+  <div class='stat-card revenue-card'>
+    <h3>Revenue Breakdown</h3>
+    <div class='revenue-breakdown'>
+      <div class='revenue-row'>
+        <span class='revenue-name'>Cash</span>
+        <span class='revenue-amount'>RM 503</span>
+      </div>
+      <div class='revenue-row'>
+        <span class='revenue-name'>Panel</span>
+        <span class='revenue-amount'>RM 399</span>
+      </div>
+    </div>
+  </div>
 </div>
 <h3>Patient Activity</h3>
 <table class='data-table'>
-<tr><th>Patient</th><th>IC</th><th>Registration</th><th>Consultation</th><th>Diagnosis</th><th>Medicine</th><th>Amount</th></tr>
+<tr><th>Patient</th><th>IC</th><th>Age</th><th>Consultation</th><th>Diagnosis</th><th>Medicine</th><th>Amount</th><th>Panel</th></tr>
 <tr>
 <td>SITI NUR SYUHAIBAH BINTI MOHD SAMSUDIN  </td>
 <td>940427095046</td>
-<td>08/07/2026</td>
+<td>32</td>
 <td>08/07/2026 09:23</td>
 <td>STILL HAVING DIARRHEA 4 EPS TODAY NAUSEOUS LMP 17/6/26      ; NOT TAKEN ORALLY YET TODAY BP 116/61 HR 87 SPO2 99 T 36 PA S; NT HYDRATION FAIR                                           </td>
-<td>IV        , IVD       , TCA       </td>
+<td>IV (1), IVD (1), TCA (1)</td>
 <td>RM 155</td>
+<td>CASH</td>
 </tr>
 <tr>
 <td>NURULAEZZAH BINTI MOHD SALLEH           </td>
 <td>800911075288</td>
-<td>08/07/2026</td>
+<td>46</td>
 <td>08/07/2026 09:44</td>
 <td>BP 129/77 HR 88 SPO2 99 T 36                                </td>
-<td>BT KT2    </td>
+<td>BT KT2 (1)</td>
 <td>RM 150</td>
+<td>CASH</td>
 </tr>
 <tr>
 <td>MUHAMMAD AAMIR KHAN BIN ROSSLI          </td>
 <td>950224085015</td>
-<td>08/07/2026</td>
+<td>31</td>
 <td>08/07/2026 09:50</td>
 <td>FEVER LSAT NIGHT LAT PCM TAKEN THIS OM + HEADACHE RIGHT     ; SIDED BP 145/83 HR 88 SPO2 99 T 36 INTRAORAL NAD BL PUPILS  ; EQ REACTIVE RECENTLY CHANGE SPECS 3 MONTHS AGO              </td>
-<td>PCM 650   , TCA       , VOREN     </td>
+<td>PCM 650 (20), TCA (1), VOREN (10)</td>
 <td>RM 50</td>
+<td>CASH</td>
 </tr>
 <tr>
 <td>NUR NATASYA LIYANA BINTI MOHD YUSOFF    </td>
 <td>971008075544</td>
-<td>08/07/2026</td>
+<td>29</td>
 <td>08/07/2026 10:35</td>
 <td>NECK STIFFNESS ?WRONG POSTION DURING SLEEP BP 129/71        ; HR 69 SPO2 99 BL NECK ROM FULL NO DEFORMITY NEURO INTCAT    </td>
-<td>DERMORUB  , LIO       , TCA       </td>
+<td>DERMORUB (1), LIO (10), TCA (1)</td>
 <td>RM 45</td>
+<td>CASH</td>
 </tr>
 <tr>
 <td>KHAIRUL FARHAN HALIMI BIN KHAIRUL AFANDI</td>
 <td>970301065113</td>
-<td>08/07/2026</td>
+<td>29</td>
 <td>08/07/2026 10:43</td>
 <td>FEVERISH RN + HEADACHE SINCE LAST NIGHT NO GI LOSSES ORAL   ; ITNAKE GOOD BP 101/52- SIMIALR TO BASE LINE HR 60 SPO2 99   ; GOOD PULSE VOLUME HYDRATION GOOD THROAT INJ TONSILS NAD     ; LUNGS CLEAR EA                                              </td>
-<td>ALLERPID  , CELEB2    , PCM 650   , TCA2      </td>
+<td>ALLERPID (14), CELEB2 (10), PCM 650 (20), TCA2 (1)</td>
 <td>RM 108</td>
+<td>AIA  </td>
 </tr>
 <tr>
 <td>HUSNUL KHATIMAH BINTI JANTAN            </td>
 <td>850513085558</td>
-<td>08/07/2026</td>
+<td>41</td>
 <td>08/07/2026 10:57</td>
 <td>FEVER X 2/7 + MYALGIA TAKEN PCM BP 135/81 HR 78 SPO2 99 T 36; THROAT INJ TONSILS NAD ALREADY HAVE PCM                     </td>
-<td>CELE400   , TCA       </td>
+<td>CELE400 (10), TCA (1)</td>
 <td>RM 55</td>
+<td>CASH</td>
 </tr>
 <tr>
 <td>HASYA KHAYRA BINTI MOHD FAIZAL          </td>
 <td>190516070748</td>
-<td>08/07/2026</td>
+<td>7</td>
 <td>08/07/2026 10:59</td>
 <td>COUGHX 3/7+ RN NO FEVER NO GI LOSSES ORAL INTAKE GOOD       ; NO SOB TONSILS GRADE 2 -SIMILAR TO PREV NO EXUDATE          ; ;LUNGS CLEAR EA                                             </td>
-<td>LORA      , TCA       , WINDECO   </td>
+<td>LORA (1), TCA (1), WINDECO (1)</td>
 <td>RM 48</td>
+<td>CASH</td>
 </tr>
 <tr>
 <td>MUHAMMAD HARIZ NAWFAL BIN MOHD HAFIZ    </td>
 <td>160817020755</td>
-<td>08/07/2026</td>
+<td>10</td>
 <td>08/07/2026 11:19</td>
 <td>RN X 2/7 NO FEVER NO COUGH NO SOB ORAL INTAKE GOOD HR 108   ; SPO2 99T 37.1 INTRAORALN AD LUNGS CLEAR EA                  </td>
-<td>LORA-KAM  , PCM       , TCA2      </td>
+<td>LORA-KAM (10), PCM (1), TCA2 (1)</td>
 <td>RM 51</td>
+<td>AIA  </td>
 </tr>
 <tr>
 <td>WAN NORLIZA BINTI SHERIFF @ SHARIF      </td>
 <td>760615025936</td>
-<td>08/07/2026</td>
+<td>50</td>
 <td>08/07/2026 12:02</td>
 <td>DIARREHA X 3EPS TAKEN FOOD AT FACTORY +BLOATEDNESS          ; BP 116/64 HR 88 SPO2 99T 36 HYDRATION FAIR PA SNT           </td>
-<td>BUSCO     , IMODI     , NEXIUM    , TCA2      </td>
+<td>BUSCO (10), IMODI (10), NEXIUM (7), TCA2 (1)</td>
 <td>RM 106</td>
+<td>AIA  </td>
 </tr>
 <tr>
 <td>HARRAZ DANIAL BIN MUHAMMAD HAFIZ IZZUDDI</td>
 <td>230226070161</td>
-<td>08/07/2026</td>
+<td>3</td>
 <td>08/07/2026 16:31</td>
 <td>FEVERX3/7 + RN AND COUGH REDUCE ORAL INTAKE NO GI LOSSES    ; OE ACTIVE TALKATIVE HR 85 SPO2 100 T 36 TONSILS GRADE 2     ; LUNGS CLEAR EA                                              </td>
-<td>EES       , MARIMER   , PCM       , TCA2      , WINDEX    </td>
+<td>EES (3), MARIMER (2), PCM (1), TCA2 (1), WINDEX (1)</td>
 <td>RM 134</td>
+<td>MCARE</td>
 </tr>
 </table>
 </div>
