@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Poliklinik Damai Bertam - Clinic Dashboard</title>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<style>
+* { box-sizing: border-box; }
+body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
+.header { background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%); color: white; padding: 0; text-align: center; }
+.header-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background: rgba(0,0,0,0.1); font-size: 13px; }
+.back-link { color: rgba(255,255,255,0.9); text-decoration: none; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.3); border-radius: 4px; transition: all 0.2s; }
+.back-link:hover { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.5); }
+.gen-info { color: rgba(255,255,255,0.8); font-size: 12px; }
+.header h1 { margin: 20px 0 5px 0; font-size: 28px; font-weight: 600; }
+.date-display { font-size: 18px; margin: 5px 0 20px 0; opacity: 0.9; font-weight: 300; }
+.content { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 30px; }
+.stat-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center; border: 1px solid #e9ecef; transition: transform 0.2s, box-shadow 0.2s; }
+.stat-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+.stat-value { font-size: 38px; font-weight: 700; color: #2196F3; margin-bottom: 8px; }
+.stat-label { color: #6c757d; font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+.revenue-card { padding:16px 20px; }
+.revenue-card h3 { margin:0 0 6px 0; font-size:16px; font-weight:600; }
+.revenue-breakdown { margin-top:0; padding-top:6px; border-top:1px solid #e9ecef; text-align:left; width:100%; }
+.revenue-row { display:flex; justify-content:space-between; align-items:center; width:100%; margin:4px 0; }
+.revenue-name { font-weight:600; color:#555; }
+.revenue-amount { font-weight:bold; color:#2196F3; }
+.data-table { width: 100%; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid #e9ecef; }
+.data-table th { background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%); color: white; padding: 14px 16px; text-align: left; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+.data-table td { padding: 14px 16px; border-bottom: 1px solid #e9ecef; font-size: 14px; }
+.data-table tr:hover { background: #f8f9fa; }
+.data-table tr:last-child td { border-bottom: none; }
+.footer { background: #fff; color: #6c757d; text-align: center; padding: 20px; margin-top: 40px; border-top: 1px solid #e9ecef; font-size: 13px; }
+.footer a { color: #2196F3; text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+@media (max-width: 768px) { .header-top { flex-direction: column; gap: 10px; } .stats-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<script>
+var _a=sessionStorage.getItem('auth');if(_a==null||_a==''){window.location.href='index.html';}
+</script>
+<div class='header'>
+  <div class='header-top'>
+    <a href='main.html' class='back-link'>&lt; Back to Main</a>
+    <span class='gen-info'>         Last Generated: 22/07/2026 13:00:06</span>
+    <span style='margin-left:auto;font-size:13px'>User: <span id='user-display'></span></span>
+  </div>
+  <h1>Poliklinik Damai Bertam - Clinic Dashboard</h1>
+  <div class='date-display'>22/07/2026</div>
+</div>
+<script>document.getElementById('user-display').textContent=sessionStorage.getItem('username')||'Unknown';</script>
+<div class='content'>
+<div class='stats-grid'>
+  <div class='stat-card'>
+    <div class='stat-value'>4611</div>
+    <div class='stat-label'>Total Patients</div>
+  </div>
+  <div class='stat-card'>
+    <div class='stat-value'>8</div>
+    <div class='stat-label'>Consulted</div>
+  </div>
+  <div class='stat-card'>
+    <div class='stat-value'>RM 934</div>
+    <div class='stat-label'>Today's Revenue</div>
+  </div>
+  <div class='stat-card revenue-card'>
+    <h3>Revenue Breakdown</h3>
+    <div class='revenue-breakdown'>
+      <div class='revenue-row'>
+        <span class='revenue-name'>Cash</span>
+        <span class='revenue-amount'>RM 215</span>
+      </div>
+      <div class='revenue-row'>
+        <span class='revenue-name'>Panel</span>
+        <span class='revenue-amount'>RM 719</span>
+      </div>
+    </div>
+  </div>
+</div>
+<h3>Patient Activity</h3>
+<table class='data-table'>
+<tr><th>Patient</th><th>IC</th><th>Age</th><th>Consultation</th><th>Diagnosis</th><th>Medicine</th><th>Amount</th><th>Panel</th></tr>
+<tr>
+<td>MOHD YUSRI BIN YUSOF                    </td>
+<td>830723075261</td>
+<td>43</td>
+<td>22/07/2026 09:07</td>
+<td>HAVING LOWER BACK PAIN- EXAG DT LABOR WORKING AT HOME       ; AT WORK GOT KERJA RINGAN BP 147/84 HR 78 SPO2 99 BACK       ; MILD TENDER OVER LUMBAR AREA NO NUMBNESS MORE USE PATCH     ; AND ROLL, AVOIDING TAKEN ORAL MEDS                          </td>
+<td>DERMORUB (1), LOCOA (1), TCA2 (1)</td>
+<td>RM 85</td>
+<td>GFLEX</td>
+</tr>
+<tr>
+<td>MOHD RIDZUAN BIN ABDULLAH               </td>
+<td>880426355027</td>
+<td>38</td>
+<td>22/07/2026 09:14</td>
+<td>RN AND MYSLGIA X 2/7 NO FEVER SICK CONTACT W CHILD HO       ; TRAVELLING TO CHINA -WORK PURPOSES X 2/52 BP 112/76 HR 78   ; SPO2 99 THROAT INFLAMED TONSILS NAD T 36                    </td>
+<td>ALLERPID (14), MAXIGESIC (10), TCA2 (1)</td>
+<td>RM 71</td>
+<td>MCARE</td>
+</tr>
+<tr>
+<td>ZAHANIM BINTI ZAKARIA                   </td>
+<td>731109025084</td>
+<td>53</td>
+<td>22/07/2026 09:35</td>
+<td>MYALGAI AND RN X 2/7 SICK CONTACT W HUSBAND NO GI LOSSES    ; BP 131/66 HR 68 SPO2 99 T 36 INTRAORAL NAD                  </td>
+<td>AERIUS G (10), CELE400 (10), ENSURE (1), GLUCERNA (1), PCM 650 (10), TCA2 (1)</td>
+<td>RM 204</td>
+<td>AIA  </td>
+</tr>
+<tr>
+<td>AUFA AWLYA BINTI MOHD RODZI             </td>
+<td>120814070646</td>
+<td>14</td>
+<td>22/07/2026 09:36</td>
+<td>FEVER TODAY COUGH RN X 2/7 NO GI LSOSES ORAL INTAKE GOOD    ; BP 112/63 HR 115 SPO2 99T 36 INTRAORAL NAD LUNGS CLEAR EA   </td>
+<td>ENSURE (2), LORA-KAM (10), PCM 650 (10), TCA2 (1), VOREN (10), WINDECO (1)</td>
+<td>RM 179</td>
+<td>AIA  </td>
+</tr>
+<tr>
+<td>WAN MOHD NORNIZAM BIN W. OTHMAN         </td>
+<td>761217115113</td>
+<td>50</td>
+<td>22/07/2026 09:48</td>
+<td>LETHARGICX 2/7 WORKING LATE- AUDIT ORAL INTAKE GOOD         ; NO GI LOSSES CONCERN REGARDING BONE DENSITY TEST DONE       ; AT WORK PLACE. CLAIM LOW BP 142/71 HR 78 SPO2 99 T 36 SUGGES; T FOR CALCIUM SUPPLEMENT  AND TAKE DIET HIGH CALCIUM        </td>
+<td>CALCIUM (30), TCA2 (1)</td>
+<td>RM 80</td>
+<td>AIA  </td>
+</tr>
+<tr>
+<td>KYAW MIN HTIKE                          </td>
+<td>MH631509    </td>
+<td>29</td>
+<td>22/07/2026 10:18</td>
+<td> - </td>
+<td>ITYPHIM (1)</td>
+<td>RM 65</td>
+<td>CASH</td>
+</tr>
+<tr>
+<td>WAN FAZWARI BIN WAN AHMAD               </td>
+<td>710411025031</td>
+<td>55</td>
+<td>22/07/2026 10:24</td>
+<td>BP 135/95 HR 78 SPO2 99 DONE BT 2024 TCHOL 6.4 LDL 4.5 DEFAU; LTER ATOR40MG TAKEN PIL MORINGA X 1 YEAR FATHER PASSED      ; AWAY MOTHER PARKINSON                                       </td>
+<td>BT KT2 (1)</td>
+<td>RM 150</td>
+<td>CASH</td>
+</tr>
+<tr>
+<td>SYUKRAN BIN MOKHTAR                     </td>
+<td>770608086609</td>
+<td>49</td>
+<td>22/07/2026 11:07</td>
+<td>COUGH X 1/52+ HEADCHE + RN AND ON ADN OFF FEVER DONE SWAB TE; ST NEGATIVE TAKEN ABX BD- COMPLETED NOT RESOVLED BP 142/81  ; HR 88 SPO2 99 T 36 THROAT INJ TONSILS NAD LUNGS CLEAR EA    </td>
+<td>AERIUS G (10), DEXA (15), MAXIGESIC (10), TCA2 (1), WINDEX (1), ZITHROLIDE (3)</td>
+<td>RM 100</td>
+<td>HELMA</td>
+</tr>
+</table>
+</div>
+<div class='footer'>
+  <p>  | <a href='main.html'>Back to Main Dashboard</a> | <a href='index.html' onclick='sessionStorage.removeItem("auth")'>Logout</a></p>
+</div>
+</body>
+</html>
