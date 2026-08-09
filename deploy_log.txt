@@ -2154,3 +2154,58 @@
 07/08/2026 17:30:28 - Upload complete: 18/18 files
 07/08/2026 17:30:28 - ? Deployed to Server successfully
 07/08/2026 17:30:28 - Step 4: Uploading log file...
+07/08/2026 17:30:31 - ? Log file uploaded to Server
+07/08/2026 17:30:31 - === PROCESS COMPLETED SUCCESSFULLY ===
+09/08/2026 12:30:01 - === AUTO DASHBOARD GENERATION STARTED ===
+09/08/2026 12:30:01 - Timestamp: 09/08/2026 12:30:01
+09/08/2026 12:30:01 - Step 1: Generating last 7 days of dashboards...
+09/08/2026 12:30:01 - Regenerating last 7 days of dashboards...
+09/08/2026 12:30:02 - Generated: dashboard_20260803.html
+09/08/2026 12:30:03 - Generated: dashboard_20260804.html
+09/08/2026 12:30:03 - Generated: dashboard_20260805.html
+09/08/2026 12:30:04 - Generated: dashboard_20260806.html
+09/08/2026 12:30:04 - Generated: dashboard_20260807.html
+09/08/2026 12:30:04 - No patient activity records found for date: 08/08/2026
+09/08/2026 12:30:04 - Generated: dashboard_20260808.html
+09/08/2026 12:30:04 - Generated: dashboard_20260809.html
+09/08/2026 12:30:04 - ? Regenerated 7 days of dashboards
+09/08/2026 12:30:05 - ? Dashboards generated successfully (includes yesterday for data updates)
+09/08/2026 12:30:05 - Step 1b: Regenerating main.html with date list...
+09/08/2026 12:30:05 - GenerateMainIndex: Searching for dashboard files 
+09/08/2026 12:30:05 - GenerateMainIndex: Found 17 files
+09/08/2026 12:30:05 - Generated main.html with 17 dates
+09/08/2026 12:30:05 - ? main.html regenerated with latest dates (DESCENDING order)
+09/08/2026 12:30:05 - Step 1c: Generating login page as index.html...
+09/08/2026 12:30:05 - Generated index.html (login page)
+09/08/2026 12:30:05 - ? Login page generated as index.html
+09/08/2026 12:30:05 - Step 1d: Exporting users to JSON...
+09/08/2026 12:30:05 - Exported 2 users to users.json
+09/08/2026 12:30:05 - Generated users.json
+09/08/2026 12:30:05 - ? users.json exported
+09/08/2026 12:30:05 - Step 2: Cleaning up old dashboard files...
+09/08/2026 12:30:05 - Deleted old dashboard: DASHBOARD_20260724.HTML
+09/08/2026 12:30:05 - Deleted old dashboard: DASHBOARD_20260725.HTML
+09/08/2026 12:30:05 - ? Cleaned up 2 old files
+09/08/2026 12:30:05 - Step 3: Deploying to Server...
+09/08/2026 12:30:05 - Found 17 files to upload
+09/08/2026 12:30:06 - Uploaded: dashboard_20260726.html
+09/08/2026 12:30:08 - Uploaded: dashboard_20260727.html
+09/08/2026 12:30:10 - Uploaded: dashboard_20260728.html
+09/08/2026 12:30:11 - Uploaded: dashboard_20260729.html
+09/08/2026 12:30:13 - Uploaded: dashboard_20260730.html
+09/08/2026 12:30:14 - Uploaded: dashboard_20260731.html
+09/08/2026 12:30:15 - Uploaded: dashboard_20260801.html
+09/08/2026 12:30:17 - Uploaded: dashboard_20260802.html
+09/08/2026 12:30:18 - Uploaded: dashboard_20260803.html
+09/08/2026 12:30:20 - Uploaded: dashboard_20260804.html
+09/08/2026 12:30:21 - Uploaded: dashboard_20260805.html
+09/08/2026 12:30:23 - Uploaded: dashboard_20260806.html
+09/08/2026 12:30:24 - Uploaded: dashboard_20260807.html
+09/08/2026 12:30:25 - Uploaded: dashboard_20260808.html
+09/08/2026 12:30:27 - Uploaded: dashboard_20260809.html
+09/08/2026 12:30:28 - Uploaded: index.html
+09/08/2026 12:30:29 - Uploaded: main.html
+09/08/2026 12:30:30 - Uploaded: users.json
+09/08/2026 12:30:30 - Upload complete: 18/18 files
+09/08/2026 12:30:30 - ? Deployed to Server successfully
+09/08/2026 12:30:30 - Step 4: Uploading log file...
